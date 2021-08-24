@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap/css/bootstrap.css') }}">
+
+</head>
+<body>
+
+	<div class="div-navegacion"> 
+		<header>
+			<div class="div-rayas">
+				
+					<a class="rayas">
+				    
+				  </a>
+				
+				  
+				  <h1>
+					 <a href="index.html" class="text-decoration-none text-white" id="a-estudents">
+				  		Estudents
+				  	</a>
+			  	</h1>
+
+			  	
+			</div>
+				<div class="barra-navegacion">
+				
+			  		<li class="imagen-usuario"  id="imagen" >
+			  			<div class="foto-usuario" id="m-desplegable"><img src="{{ url_for('static', filename='media/foto1.png') }}"></div>
+				  		<ul class="ul">
+						  	<li><a title="Ir A Inicio" href="/1/2" class="text-decoration-none text-white">Inicio</a></li>
+						  	<li><a title="Ver Mi Perfil" href="alumno.html" class="text-decoration-none text-white btn-outline-primary">Ver Perfil</a></li>
+						  
+						  	<li><a title="Ver mis Materias" href="/materias" class="text-decoration-none text-white">Materias</a></li>
+						  	<li><a title="Cerrar Secciòn" href="../login.html" class="text-decoration-none text-white">Salir</a></li>
+					  	</ul>
+			  		</li>
+			</div>
+
+
+		</header>
+
+	<div class="aside-section">
+		{% block content %}
+
+		{% endblock %}
+
+	</div>
+	
+
+
+
+</body>
+</html>

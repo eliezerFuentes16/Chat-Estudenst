@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registrarse</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap/css/bootstrap.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/registrarse.css') }}">
+</head>
+<body>
+	<!-- <object data="index.html"></object>
+	<iframe srcdoc="index.html" width="560" height="315">
+</iframe>
+
+	<embed src="index.html" width="400" height="250" /> -->
+	<div class="div-formulario">
+		<h2>Registrarse</h2>
+		<form method="post">
+		<div class="div-formulario2">
+
+				<div style="">
+					<input type="text" class="" required="true" placeholder="Nombre" name="nombre">
+					<input type="number" min="0" class="" required="true" placeholder="Cedula" name="cedula">
+					<input type="password" min="0" class="" required="true" placeholder="Contraseña" name="contraseña">
+					
+				</div>
+				<div>
+					<input type="email" class="" required="true" placeholder="Email" name="email">
+					<input type="text" class="" required="true" placeholder="Telefono" name="telefono">
+					<select style="" class="input-group-lg form-select" name="role">
+						<option>Alumno</option>
+						<option>Profesor</option>
+					</select>
+					
+				</div>
+
+
+			<!-- 	<div class="div-select" style="width:100%; margin-top:-50px">
+
+
+					<select style="margin-top:0" class="input-group-lg form-select" name="role">
+						<option>Alumno</option>
+						<option>Profesor</option>
+					</select>
+				</div> -->
+
+		</div>
+		<div id="div-boton">
+			<p>{{mensaje}}</p>
+			<button class="btn btn-primary">Registrarse</button>
+			<a href="/login">Ya Estoy Registrado</a>
+		</div>
+		</form>
+	</div>
+
+</body>
+</html>

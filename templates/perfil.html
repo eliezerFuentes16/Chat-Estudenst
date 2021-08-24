@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/perfil.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap/css/bootstrap.css') }}">
+</head>
+<body>
+	<div class="div-navegacion"> 
+		<header>
+			<div class="div-rayas">
+				  <a class="rayas">
+				   
+				  </a>
+				  <h1>
+					<a href="/" class="text-decoration-none text-white" id="a-estudents">
+				  		Estudents
+				  	</a>
+			  	</h1>
+
+			  	
+			</div>
+				<div class="barra-navegacion">
+				
+			  		<li class="imagen-usuario"  id="imagen" >
+			  			<div class="foto-usuario" id="m-desplegable"><img src="{{ url_for('static', filename='media/foto1.png') }}"></div>
+				  		<ul class="ul">
+						  	<li><a title="Ir A Inicio" href="/" class="text-decoration-none text-white">Inicio</a></li>
+						  	<li><a title="Ver Mi Perfil" style="padding:0" class="text-decoration-none text-white btn-outline-primary"><form action="/Perfil" method="post"><input type="hidden" name="idE" value="{{ ide }}"><button>Ver Perfil</button></form></a></li>
+
+						  
+						  	<li><a title="Ver mis Materias" href="/materias" class="text-decoration-none text-white">Materias</a></li>
+						  	<li><a title="Cerrar Secciòn" href="/login" class="text-decoration-none text-white">Salir</a></li>
+					  	</ul>
+			  		</li>
+			</div>
+
+
+		</header>
+	</div>
+
+	<div class="aside-section">
+
+		<div id="foto-role">
+
+			<div class="foto-perfil">
+				{% if  usuario[5]=="p"%}
+					<img src="{{  url_for('static', filename='media/predeterminadas/profesores.jpg') }}">
+					
+				{% elif usuario[5]=="e"%}
+					<img src="{{  url_for('static', filename='media/predeterminadas/alumnos.jpg') }}">
+					
+				{% else %}
+					<img src="{{  url_for('static', filename='media/usuarios/{{ usuario[5] }}') }}">
+				{% endif %}
+
+				<h2>{{ usuario[1] }}</h2>
+
+				{% if  usuario[6]=="p"%}
+					
+					<h4>Profesor</h4>
+
+				{% elif usuario[6]=="e"%}
+					
+					<h4>Alumno</h4>
+					
+				{% endif %}
+			</div>
+			
+		</div>
+
+
+		<div id="div-informacion">
+
+			<div>
+				<div>
+					<h5>Nombre: {{ usuario[1] }}</h5><!-- <a href="" class="btn btn-primary">Editar</a> -->
+				</div>
+				<div>
+					<h5>Telefono: {{ usuario[4] }}</h5><!-- <a href="" class="btn btn-primary">Editar</a> -->
+				</div>
+			</div>
+
+			<div>
+				<div>
+					<h5>Cedula: {{ usuario[2] }}</h5><!-- <a href="" class="btn btn-primary">Editar</a> -->
+				</div>
+				<div>
+					<h5>Email: {{ usuario[3] }}</h5><!-- <a href="" class="btn btn-primary">Editar</a> -->
+				</div>
+			</div>
+
+
+		</div>
+
+	</div>
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/perfil.js') }}"></script>
+</body>
+</html>

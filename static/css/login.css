@@ -1,0 +1,84 @@
+body{
+	position: absolute;
+	width:100%;
+	height: 100%;
+	background:linear-gradient(#48e1, #58e7), url("../media/foto1.png");
+	background-attachment:fixed;
+	background-position: center;
+	background-size: cover;
+
+
+
+}
+
+.div-formulario{
+	background: #2a170fa6;
+	position: absolute;
+	width:600px;
+	height: 450px;
+	top:0;
+	left:0px;
+	right: 0;
+	border-radius:10px;
+	bottom:0;
+	margin:auto;
+	
+}
+
+.div-formulario p{
+	text-align:center;
+	width:90%;
+	margin-left:5%;
+	margin-top:10px;
+	color:#aaa;
+}
+
+.div-formulario div{
+	color:#fff;
+	position: absolute;
+	width:600px;
+	height: 220px;
+	top:0;
+	bottom:0;
+	margin:auto;
+}
+
+.div-formulario h2{
+	text-align:center;
+}
+
+.div-formulario input{
+	display: block;
+	margin:auto;
+	margin-top:10px;
+	width:300px;
+	border-radius:1px;
+	outline:none;
+	border:none;
+	border-bottom:0.4px solid #48e;
+	padding-top:15px;
+	background: none;
+	color:#fff;
+
+
+}
+
+.div-formulario input::placeholder{
+	color:#eee6;
+}
+
+.div-formulario button{
+
+	display: block;
+	margin:auto;
+	margin-top:10px;
+
+}
+
+.div-formulario a{
+	color:#fff;
+	text-align:center;
+	display: block;
+	margin-top:10px;
+
+}

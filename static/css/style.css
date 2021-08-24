@@ -1,0 +1,623 @@
+body{
+	background:#fff;
+	position:absolute;
+	width:100%;
+	height:100%;
+	margin:0px;
+	
+}
+
+
+@media (max-width:800px){
+	.div-section{
+		width:100%!important;
+	}
+	.mensajes{
+		width:100%!important;
+	}
+	.div-aside{
+		position:absolute!important;
+		z-index:100;
+		height:calc(100% - 57px);
+	}
+	.aside{
+		height:auto;
+		
+
+
+	}
+
+	.div-agregar{
+		position:relative!important;
+		bottom:0!important;
+	}
+
+	.div-agregar a{
+		text-decoration:none;
+		color:#48e;
+		
+		width:100%;
+		text-align:center;
+		display:inline-block;
+		margin-left:0!important;
+		padding:5px 0px 5px 0px;
+		margin-bottom:10px;
+
+		
+		
+	}
+	
+}
+
+.div-navegacion h1{
+	margin:0;
+	margin-left:30px;
+	
+	
+
+}
+#a-estudents{
+	margin:0;
+	padding: 0;
+	font-weight: 600;
+	font-size:32px;
+}
+
+.div-rayas{
+	width:35px;
+	height:35px;
+	display:flex;
+}
+
+
+.rayas{	
+	margin-top:12px;
+	margin-left:10px;
+	cursor:pointer;
+	transition:all 0.5s;
+	
+}
+
+
+.div-navegacion .barra-navegacion{
+	height: 57px;
+	width:100px;
+	display: flex;
+	margin: auto;
+	
+	position: absolute;
+	top:18px;
+	right: 5px;
+
+}
+
+
+
+.div-navegacion li{
+	
+	list-style: none;
+	text-align: left;
+	
+}
+.foto-usuario{
+	
+	height:100%;
+	position: absolute;
+	right: 5px;
+	margin-bottom: 15px;
+	display: block;
+	bottom:-5px;
+	cursor: pointer;
+
+}
+.foto-usuario img{
+	width:40px;
+	height:40px;
+	border-radius:50%;
+	display:inline-block;
+	background:#555;
+	position:relative;
+	
+	margin-bottom: 50px
+	
+	
+	
+}
+.div-navegacion ul li{
+	list-style: circle;
+	text-align: left;
+	padding: 6px;
+}
+
+.div-navegacion ul li:hover{
+	background-color: #07e;
+
+}
+
+.div-navegacion li a{
+	text-decoration: none;
+	color:#fff;
+}
+.div-navegacion li button:hover{
+	background-color: #07e;
+}
+.div-navegacion li button{
+	background-color: #48e;
+	border:none;
+	width:100%;
+	height: 100%;
+	text-align:left;
+	padding:6px;
+	color:#fff;
+}
+
+.div-navegacion{
+	width:100%;
+	background:#48e;
+	color:#fff;
+	height:57px;
+}
+
+
+
+
+
+ul{
+	display: none;
+}
+
+li ul{
+    display:none;
+    position:absolute;
+    width:85px;
+    right: 1px;
+  
+    transition:height 0.3s;
+}
+
+
+      
+.barra-navegacion li ul {
+    display:none;
+	position:absolute;
+	z-index:1000;
+	background-color: #48e;
+	border-radius: 5px;
+	border:1px solid #fff;
+	margin-top:38px;
+}
+      
+
+
+
+
+.div-navegacion li{
+	
+	list-style: none;
+	text-align: left;
+	
+}
+.foto-usuario{
+	height:100%;
+	position: absolute;
+	right: 5px;
+	margin-bottom: 15px;
+	display: block;
+	bottom:-5px;
+	cursor: pointer;
+
+}
+
+.foto-usuario img{
+	width:40px;
+	height:40px;
+	border-radius:50%;
+	display:inline-block;
+	background:#555;
+	position:relative;
+	margin-bottom: 50px
+
+}
+
+.div-navegacion ul li{
+	list-style: circle;
+	text-align: left;
+	padding: 1px;
+	width:120px;
+}
+
+.div-navegacion ul li:hover{
+	background-color: #07e;
+	
+
+}
+
+.div-navegacion li a{
+	text-decoration: none;
+	color:#fff;
+	width: auto;
+	display: block;
+	padding: 5px;
+}
+
+
+
+
+li ul{
+    display:none;
+    position:absolute;
+  
+    right: 1px;
+    transition:height 0.3s;
+}
+
+
+      
+.barra-navegacion li ul {
+    display:none;
+	position:absolute;
+	z-index:1000;
+	background-color: #48e;
+	border-radius: 5px;
+	border:1px solid #fff;
+	margin-top:38px;
+	width:auto;
+}
+
+
+.aside-section{
+	width:100%;
+	height:calc(100% - 97px);
+	
+	display:flex;
+}
+
+
+
+.div-aside{
+	width:0;
+	background:#eee;
+	transition:width 0.5s;
+	overflow-y: auto;
+
+}
+
+.aside{
+	display:none;
+	transition:all 0.5s;
+	height: auto;
+
+}
+
+.aside h2{
+	font-size:22px;
+	font-weight:200;
+	text-align:center;
+	color:#555;
+	font-family:Helvetica;
+	margin-top:15px
+}
+
+.contactos{
+	padding:7px;
+	cursor:pointer;
+	display:flex;
+	position:relative;
+	font-family:Helvetica;
+	font-weight:100;
+	color:#555;
+	margin:0;
+}
+
+.contactos hr{
+	margin:0!important;
+	padding:0!important;
+}
+
+.contacto-actual{
+	background:#ccc;
+}
+
+.contactos h3{
+	margin:5px;
+	margin-top:12px;
+	font-size:18px;
+	font-weight:100;
+}
+
+
+.foto-contacto img{
+	width:40px;
+	height:40px;
+	border-radius:50%;
+	display:inline-block;
+	background:#555;
+	position:absolute;
+	right:11px!important;
+	
+	
+	
+}
+
+.div-agregar{
+	position:absolute;
+	bottom:0;
+	width:100%;
+	justify-content: center;
+	height: 40px;
+	background:#eee;
+
+	
+}
+
+.div-agregar a{
+	text-decoration:none;
+	color:#48e;
+	display:inline-block;
+	width:260px;
+	text-align:center;
+	
+	
+}
+
+.div-agregar a:hover{
+	text-decoration:none;
+	color:#555;
+}
+
+/*Mensajes*/
+
+
+
+.mensajes{
+	position:absolute;
+	height:calc(100% - 117px);
+	background:#fff;
+	right:0;
+	
+	width:100%;
+	transition:width 0.5s;
+	font-size:14px;
+	overflow-y: scroll;
+	
+}
+
+.div-mensaje{
+	/*position:absolute;*/
+	bottom:0;
+	width:100%;
+	height: auto;
+
+
+	
+
+}
+
+
+.mensajes-usuario{
+	text-align:right;
+	margin-right:5px;
+	font-size:16.5px;
+	margin-top:2px;
+}
+.mensajes-usuario div,.mensajes-usuario .texto-mensaje{
+	background:#48e;
+	display:inline-block;
+	padding:3px 10px;
+	border-radius:7px;
+	color:#fff;
+	max-width:90%;
+	margin-top:1px;
+
+}
+.texto-mensaje-usuario{
+	text-align:left!important;
+}
+
+
+.mensajes-amigos{
+	margin-left:5px;
+	margin-top:5px;
+	font-size:16.5px;
+
+
+}
+.mensajes-amigos div,.mensajes-amigos .texto-mensaje{
+	background:#ddd;
+	display:inline-block;
+	padding:3px 10px;
+	border-radius:7px;
+	margin:0;
+	max-width:90%;
+
+}
+
+.mensajes-amigos .nombre-mensaje{
+	display:block;
+	margin:0;
+	font-size:12px;
+	color:#aaa;
+	margin-top:5px;
+}
+
+
+
+.div-section{
+	width:100%;
+	background:#fff;
+	position:absolute;
+	height:60px;
+	bottom:0;
+	transition:width 0.5s;
+
+}
+
+.div-formulario{
+	background: red
+	height: 50px;
+	border-top:0.1px solid #2224;
+}
+
+
+form{
+	position:relative;
+	
+}
+
+#mas{
+	width:60px;
+	position: absolute;
+	left:0;
+	
+}
+
+.div-textarea{
+	
+	width:calc(100% - 140px);
+	position:absolute;
+	height: 48px;
+	padding:0;
+	left:55px;
+}	
+
+.div-section .div-button{
+
+	position:absolute;
+	right:6px;
+	margin:0;
+	bottom:0;
+	top:0;
+	margin:auto;
+	width:80px;
+	
+	height:48px;
+	margin-left:10px;
+}
+
+
+.div-section textarea{
+	width:100%;
+	font-family:sans-serif;
+	margin-left:5px;
+	height: calc(100%);
+	outline:none;
+	padding:0;
+	margin-top:5px;
+	border-radius:5px;
+	padding-left:0.5px;
+
+
+}
+
+.div-section textarea::placeholder{
+	font-size:16px;
+
+}
+
+.div-section textarea:focus{
+	outline:.5px solid #4ae;
+
+}
+
+.div-section .boton-enviar{
+	padding:1px;
+	background:none;
+	margin:0;
+	outline:none;
+	color:#48e;
+	border:none;
+	font-size:19px;
+	margin:auto;
+	font-family:sans-serif;
+	cursor:pointer;
+	position: absolute;
+	right: 5px;
+	font-weight: 500;
+	width:60px;
+	margin-top:8px;
+}
+
+#mas{
+	position:absolute;
+}
+
+.div-section .boton-archivo{
+	padding:1px;
+	background:none;
+	margin:0;
+	outline:none;
+	color:#48e;
+	border:none;
+	font-size:40px;
+	margin:auto;
+	margin-top:-8px;
+	cursor:pointer;
+	margin-right:10px;
+	width:30px;
+	text-align: center;
+	position:absolute;
+	left:20px;	
+	transition: transform 0.5s;
+	height: 60px;
+	font-weight: 400;
+	left: calc(50% - 15px);
+}
+
+
+.div-section .input-archivos{
+	display: none;
+}
+
+.div-section #div-archivo{
+	display:inline;
+	padding: 0;
+	margin:0;
+	width:60px;
+}
+
+
+
+.ventana-modal-imagenes{
+	position: absolute;
+	height:calc(100% - 10px);
+	width:calc(99% - 10px);
+	margin-left:calc(0.5% + 1px);
+	background: #999;
+	border:4px dashed #fff;
+	display: none;
+}
+
+.ventana-modal-imagenes div{
+	color: #fff;
+	position:absolute;
+	top:calc(50% - 50px);
+	bottom: 0;
+	left:0;
+	right:0;
+	margin:auto;
+	text-align: center;
+	font-family: Helvetica;
+	font-size:22px;
+
+}
+
+
+
+/*
+<li><a title="Ver Mi Perfil" style="padding:0" class="text-decoration-none text-white btn-outline-primary"><form action="/Perfil" method="post"><input type="hidden" name="idE" value="{{ ide }}"><button>Ver Perfil</button></form></a></li>
+
+.div-navegacion li button:hover{
+	background-color: #07e;
+}
+.div-navegacion li button{
+	background-color: #48e;
+	border:none;
+	width:100%;
+	height: 100%;
+	text-align:left;
+	padding:6px;
+	color:#fff;
+}
+
+
+*/

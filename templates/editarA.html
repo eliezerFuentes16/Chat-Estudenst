@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/editarA.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap/css/bootstrap.css') }}">
+	<title></title>
+</head>
+<body>
+
+	<div class="div-navegacion"> 
+		<header>
+			<div class="div-rayas">
+				  <a class="rayas">
+				   
+				  </a>
+				  <h1>
+					 <a href="/" class="text-decoration-none text-white" id="a-estudents">
+				  		Estudents
+				  	</a>
+			  	</h1>
+
+			  	
+			</div>
+				<div class="barra-navegacion">
+				
+			  		<li class="imagen-usuario"  id="imagen" >
+			  			<div class="foto-usuario" id="m-desplegable"><img src="{{ url_for('static', filename='media/foto1.png') }}"></div>
+				  		<ul class="ul">
+						  	<li><a title="Ir A Inicio" href="/" class="text-decoration-none text-white">Inicio</a></li>
+						  	<li><a title="Ver Mi Perfil" style="padding:0" class="text-decoration-none text-white btn-outline-primary"><form action="/Perfil" method="post"><input type="hidden" name="idE" value="{{ ide }}"><button>Ver Perfil</button></form></a></li>
+						  
+						  	<li><a title="Ver mis Materias" href="/materias" class="text-decoration-none text-white">Materias</a></li>
+						  	<li><a title="Cerrar Secciòn" href="/login" class="text-decoration-none text-white">Salir</a></li>
+					  	</ul>
+			  		</li>
+			</div>
+
+
+		</header>
+	</div>
+	<div class="aside-section">
+		<div class="div-formulario">
+					<form action="/Actualizar/Estudiante" method="post">
+						<input type="text" autofocus class="input-nombre" name="nombre" class="nombre" required="true" title="Ej: Eliezer David Fuentes Moreno" placeholder="Nombre Completo" value="{{ estudiante.3 }}">
+						<input type="number" class="input-cedula" name="cedula" class="cedula" min="0" required="true" title="Ej: 41.564.456" placeholder="Cedula" value="{{ estudiante.4 }}">
+						<input type="text" class="input-estado" name="estado" class="estado" required="true" title="Ej: Reprobado, Regular, Resagado..." placeholder="Estado" value="{{ estudiante.5 }}">
+						<input type="hidden" value="{{ estudiante.0 }}" name="idE">
+						<input type="hidden" value="{{ estudiante.2 }}" name="idG">
+						<input type="submit" class="boton-registar-alumno btn btn-primary" value="Registrar" title="Registrar Alumno">
+
+					</form>
+						
+				</div>
+
+	</div>
+<script type="text/javascript" src="{{ url_for('static', filename='js/editarA.js') }}"></script>
+</body>
+</html>

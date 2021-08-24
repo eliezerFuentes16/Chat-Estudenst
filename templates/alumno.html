@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Estudens</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style_A.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap/css/bootstrap.css') }}">
+	<link rel="shortcut icon" href="foto5.ico" />
+	
+	
+</head>
+<body class="body">
+	<div class="div-navegacion"> 
+		<header>
+			<div class="div-rayas">
+				  <a class="rayas">
+				   
+				  </a>
+				  <h1>
+					 <a href="/" class="text-decoration-none text-white" id="a-estudents">
+				  		Estudents
+				  	</a>
+			  	</h1>
+
+			  	
+			</div>
+				<div class="barra-navegacion">
+				
+			  		<li class="imagen-usuario"  id="imagen" >
+			  			<div class="foto-usuario" id="m-desplegable"><img src="{{ url_for('static', filename='media/foto1.png') }}"></div>
+				  		<ul class="ul">
+						  	<li><a title="Ir A Inicio" href="/" class="text-decoration-none text-white">Inicio</a></li>
+						  	<li><a title="Ver Mi Perfil" style="padding:0" class="text-decoration-none text-white btn-outline-primary"><form action="/Perfil" method="post"><input type="hidden" name="idE" value="{{ ide }}"><button>Ver Perfil</button></form></a></li>
+
+						  
+						  	<li><a title="Ver mis Materias" href="/materias" class="text-decoration-none text-white">Materias</a></li>
+						  	<li><a title="Cerrar Secciòn" href="/login" class="text-decoration-none text-white">Salir</a></li>
+					  	</ul>
+			  		</li>
+			</div>
+
+
+		</header>
+	</div>
+	<div class="aside-section">
+
+			<div class="div-aside" id="div-aside" >
+				<aside class="aside" id="aside"> 
+					<h2>Materias</h2>
+
+				</aside>
+
+				<div class="div-agregar" id="div-agregar"> 
+					<hr>
+					<a class="div-agregar-a"></a>
+				</div>
+			</div>
+		
+
+		<section>
+			<div class="mensajes" id="mensajes">
+				{% if role=="p" %}
+				<div class="div-formulario">
+					<form action="/Crear/Estudiante/{{ ides }}" method="post">
+						<input type="text" autofocus class="input-nombre" name="nombre" class="nombre" required="true" title="Ej: Eliezer David Fuentes Moreno" placeholder="Nombre Completo">
+						<input type="number" class="input-cedula" name="cedula" class="cedula" min="0" required="true" title="Ej: 41.564.456" placeholder="Cedula">
+						<input type="text" class="input-estado" name="Estado" class="estado" required="true" title="Ej: Reprobado, Regular, Resagado..." placeholder="Estado">
+						<input type="submit" class="boton-registar-alumno btn btn-primary" value="Registrar" title="Registrar Alumno">
+
+					</form>
+						
+				</div>
+
+				{% endif %}
+
+				{% if role!="p" %}
+					<h2>Alumnos de {{ materia }}</h2>
+
+				{% endif %}
+				<div class="div-tabla">
+					<table class="table table-light table-bordered table-striped" id="tabla-alumnos">
+					    <thead>
+					        <tr>
+					            <th>Estudiante</th>
+					            <th>Cedula</th>
+					            <th>Telefono</th>
+					            <th>Email</th>
+					            <th>Estado</th>
+					            {% if role=="p" %}
+					           		<th colspan="2">Operaciones</th>
+					            {% endif %}
+					            
+					        </tr>
+					    </thead>
+					    <tbody class="tbody" id="tbody">
+					       {% for estudiante in estudiantes %}
+							<tr>
+								<td>{{ estudiante.3 }}</td>
+								<td>{{ estudiante.4 }}</td>
+								<td>{{ estudiante.7 }}</td>
+								<td>{{ estudiante.6 }}</td>
+								<td>{{ estudiante.5 }}</td>
+								{% if role=="p" %}
+									<td><form action="/Borrar/Estudiante" method="POST">
+										<input type="hidden" name="idE" value="{{ estudiante.0 }}"><input type="hidden" name="idG" value="{{ estudiante.0 }}"><button title="Borrar Alumno" class="btn btn-danger btn-delete">Borrar</button></form></td>
+									<td><form action="/Editar/Estudiante" method="POST">
+										<input type="hidden" name="idE" value="{{ estudiante.0 }}"><button  title="Borrar Alumno" class="btn btn-primary">Editar</button></form>
+
+										</td>
+								{% endif %}
+							</tr>
+							{% endfor %}
+					       
+					    </tbody>
+					</table>
+				</div>
+			</div>
+			
+		
+		</section>
+	</div>
+
+	<script src="{{ url_for('static', filename='js/codigo_A.js') }}"></script>
+</body>
+</html>
+
+
+
+
